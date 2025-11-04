@@ -2,3 +2,5 @@ outputs/
 wandb/
 __pycache__/
 strabismus_preprocessed/
+.claude
+samples_run_1/
