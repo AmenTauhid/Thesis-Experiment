@@ -44,7 +44,7 @@ def resize_with_padding(img, target_size=(256, 256)):
 
 def preprocess_dataset(
     source_dir='STRABISMUS',
-    output_dir='STRABISMUS_PREPROCESSED',
+    output_dir='data',
     target_size=(256, 256)
 ):
     """
@@ -155,7 +155,7 @@ def preprocess_dataset(
     return strab_count, normal_count
 
 
-def verify_preprocessing(output_dir='STRABISMUS_PREPROCESSED'):
+def verify_preprocessing(output_dir='data'):
     """
     Verify that all images are 256x256.
     """
@@ -189,17 +189,17 @@ if __name__ == "__main__":
     # Run preprocessing
     strab_count, normal_count = preprocess_dataset(
         source_dir='STRABISMUS',
-        output_dir='STRABISMUS_PREPROCESSED',
+        output_dir='data',
         target_size=(256, 256)
     )
 
     # Verify
-    verify_preprocessing('STRABISMUS_PREPROCESSED')
+    verify_preprocessing('data')
 
     print("\n" + "=" * 60)
     print("Next steps:")
     print("=" * 60)
-    print("1. Check the output folder: STRABISMUS_PREPROCESSED/")
+    print("1. Check the output folder: data/")
     print("2. Verify a few images to ensure quality")
-    print("3. Update your notebook to use 'STRABISMUS_PREPROCESSED' as DATA_DIR")
+    print("3. Update your notebook to use 'data' as DATA_DIR")
     print("=" * 60)

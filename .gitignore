@@ -1,7 +1,63 @@
-outputs/
-wandb/
+# Python
 __pycache__/
-strabismus_preprocessed/
-.claude
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Weights & Biases
+wandb/
+ddpm_experiment/wandb/
+vae_experiment/wandb/
+
+# Model outputs and checkpoints
+outputs/
+ddpm_experiment/outputs/
+vae_experiment/checkpoints_vae/
+*.pt
+*.pth
+*.ckpt
+
+# Sample outputs
 samples_run_1/
 samples_run_2/
+ddpm_experiment/samples_run_1/
+ddpm_experiment/samples_run_2/
+*.png
+*.jpg
+*.jpeg
+
+# Dataset (if you want to exclude it from git)
+# Uncomment if dataset is too large or available elsewhere
+# data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+temp/
+tmp/
+
+# Claude Code
+.claude/
